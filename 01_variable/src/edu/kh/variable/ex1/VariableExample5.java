@@ -42,13 +42,13 @@ public class VariableExample5 {
 	//	System.out.printf("백동현님은 33세 남성, 키는 175.1입니다. (true)", );
 		System.out.printf("%s님은 %d세 %c성, 키는 %.1fcm 입니다. (%b)\n", name, age, gender, height, tf );
 												// 소수점 아래로 1칸만 출력하겠다.
-		System.out.println("줄 바꼈나요?");  // 단점 : 줄 안바뀜 
+		  // 단점 : 줄 안바뀜 
 		//  \n으로 해결 (개행)하는 탈출문자
 		
 		System.out.println("내가 추가한 내용 16 13");
-		
-		System.out.println("1619");
-		
+	
+		System.out.println("1626 코드");
+		//아무거나 추가
 		
 		
 		
