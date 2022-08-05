@@ -45,7 +45,9 @@ public class VariableExample5 {
 		System.out.println("줄 바꼈나요?");  // 단점 : 줄 안바뀜 
 		//  \n으로 해결 (개행)하는 탈출문자
 		
+		System.out.println("내가 추가한 내용 16 13");
 		
+		System.out.println("1619");
 		
 		
 		
