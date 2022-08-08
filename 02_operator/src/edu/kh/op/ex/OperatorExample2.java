@@ -27,6 +27,31 @@ public class OperatorExample2 {
 							// num1 : 12 + 10 = 22
 		
 		System.out.println("num1 : " + num1); // 12
+	
+		
+		// 후위 연산
+		System.out.println("num2-- + 10 : "+ (num2-- + 10));
+											// 9  + 10 
+											// 결과는 19가 나오고 그 후에 num2의 숫자에서 1 감소
+		
+		System.out.println("num2 : " + num2); // 8
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 	}
 
