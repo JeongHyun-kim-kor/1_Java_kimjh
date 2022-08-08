@@ -14,7 +14,7 @@ public class OperatorPractice4 {
 		int korean = sc.nextInt();
 		System.out.print("영어 : ");
 		int english = sc.nextInt();
-		System.out.println("수학 : ");
+		System.out.print("수학 : ");
 		int math = sc.nextInt();
 		
 		
@@ -23,7 +23,8 @@ public class OperatorPractice4 {
 		System.out.println("합계 : " + sum);
 		System.out.println("평균 : " + avg );
 		
-		String result = (korean >= 40 && english>=40 && math>=40) && avg>=60 ? "합격" : "불합격";
+		String result = (korean >= 40 && english>=40 && math>=40) && avg>=60 ?
+				"합격" : "불합격";
 		System.out.println(result);
 	}
 
