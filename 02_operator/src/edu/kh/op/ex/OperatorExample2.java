@@ -37,6 +37,20 @@ public class OperatorExample2 {
 		System.out.println("num2 : " + num2); // 8
 		
 		
+		// 연습문제
+		int a = 3;
+		int b = 5;
+		int c = a++ + --b; // 3 + 4
+		// c = 3++(a) + --5(b)
+		// c = 3++(a) + 4(b)
+		// c = 7 , b = 4  a :
+		
+		// a = 4  b = 4 c = 7
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);
+		System.out.printf("a = %d, b= %d, c = %d \n", a,b,c);
+		
 		
 		
 		
