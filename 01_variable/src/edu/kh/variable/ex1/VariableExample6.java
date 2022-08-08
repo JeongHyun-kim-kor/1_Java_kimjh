@@ -52,10 +52,8 @@ public class VariableExample6 {
 			
 			
 			
- // 머지 이거도 같은ㅍ ㅗㄹ더?
 		
-		
-			
+	
 			
 			
 			
