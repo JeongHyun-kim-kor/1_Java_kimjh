@@ -200,7 +200,7 @@ public class ConditionPractice {
 		if (check <= 14) {
 			System.out.println("Fail [출석 횟수 부족 ("+(int)check+"/20)]");
 			
-		} else { // 출석 만족
+		} else { // 출석 만족하는 상황 > 밑 print문을 출력후
 			System.out.printf("중간 고사 점수(20) : %.1f \n", mid);
 			System.out.printf("기말 고사 점수(30) : %.1f \n", fin);
 			System.out.printf("과제 점수(30) : %.1f \n", work);
@@ -208,7 +208,7 @@ public class ConditionPractice {
 			
 			System.out.printf("총점 : %.1f \n", sum	);
 		
-		
+			// Fail [점수 미달] / PASS를 출력할지?
 		if(sum>= 70.0) {
 			System.out.println("PASS");
 		}else {
