@@ -14,11 +14,11 @@ public class LoopPracticeRun {
 //		lp.practice6(); // 약간 애매
 //		lp.practice7();
 //		lp.practice8();
-		lp.practice9(); //미
-//		lp.practice10();
+		lp.practice9(); // 미
+//		lp.practice10();// 미
 //		lp.practice11();// 미
-//		lp.practice12();
-//		lp.practice13();
+//		lp.practice12();// 미
+//		lp.practice13();  // 공배수의 개수 출력은 못함
 	}	
 
 }

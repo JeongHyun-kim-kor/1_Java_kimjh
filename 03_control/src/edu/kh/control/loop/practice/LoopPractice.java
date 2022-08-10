@@ -154,16 +154,23 @@ public class LoopPractice {
 		 * 공백 3 2 1 0
 		 * *  1 2 3 4
 		 */
-		for(int x = 1 ; x < num ; x++) {
-			System.out.print(" ");
-
-			for (int y = 4 ; y >= x ; y++) {
+		//https://blog.naver.com/jjarajjara1903/222440166448
+		for(int i = 1 ; i <= num ; i++) {  // 한칸아래로
+			
+			for(int j= num-1 ; j >= num ; j--) { // 공백  // 감소해야하고
+				System.out.print(" ");
+			
+//			for( ) {  // 별찍기   // 증가해야하고
+		
+			for(int k = 2; k <=j; k++) {
 				System.out.print("*");
 			}
-			
 			System.out.println();
-
-		}
+			}	
+					
+					
+					
+			}
 		
 		
 		
@@ -197,17 +204,65 @@ public class LoopPractice {
 			for(int i = 1; i<num ; i++) {
 				System.out.print("*");
 				
-			}else {
-				System.out.println();
 			}
 		}
 	}
 	
 	public void practice12() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("정수 입력 : ");
+		int num= sc.nextInt();
+		
+		// 나머지가 1과 0에만 입력개수만큼의 별 출력 
+		// 그 외에 빈칸 별?
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 	}
 	public void practice13() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("자연수 하나를 입력하세요 : ");
+		int num= sc.nextInt();
+		int count = 0;
+		// num = 15 
 		
+		//입력한 수까지2와 3의 배수를  출력해라
+		for(int i = 1 ; i <=num ; i++) {
+			if(i % 2 == 0 || i % 3 == 0) {
+				System.out.print(i+" ");
+				count++;
+
+			} 
+//			else if ( i % 6 == 0) {
+//			}
+		}
+		System.out.println("\ncount : " + count);
+		
+		//1~15까지 출력해라 + for 문
+//		for(int i = 1; i<=num ; i++) {
+////			if(num % i == 0) // 공약수 출력
+//			if(i / (i*2) == 0 || i / (i*3) == 0) 
+//			System.out.print(i+ " ");
+//		}
+		
+//		
+//		if(num / 2 == 0 || num / 3 == 0)
+//		{
+//			
+//		}
+//		for(int i = 1 ; i <=num ; i++) {
+//			System.out.print(i);
+//		}
 	}
 	
 	
