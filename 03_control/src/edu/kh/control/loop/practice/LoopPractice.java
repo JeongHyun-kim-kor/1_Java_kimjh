@@ -157,20 +157,19 @@ public class LoopPractice {
 		//https://blog.naver.com/jjarajjara1903/222440166448
 		for(int i = 1 ; i <= num ; i++) {  // 한칸아래로
 			
-			for(int j= num-1 ; j >= num ; j--) { // 공백  // 감소해야하고
+			for(int j= num ; j >= i ; j--) { // 공백  // 감소해야하고
 				System.out.print(" ");
-			
-//			for( ) {  // 별찍기   // 증가해야하고
-		
-			for(int k = 2; k <=j; k++) {
+			}
+			for(int k = 0; k <=i-1; k++) {
 				System.out.print("*");
+			
 			}
 			System.out.println();
 			}	
+		
 					
 					
-					
-			}
+			
 		
 		
 		
