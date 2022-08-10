@@ -188,7 +188,27 @@ public class LoopPractice {
 		
 	}
 	
+	public void practice11() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("정수 입력 : ");
+		int num= sc.nextInt();
+		
+		if(num % 2 == 1) {
+			for(int i = 1; i<num ; i++) {
+				System.out.print("*");
+				
+			}else {
+				System.out.println();
+			}
+		}
+	}
 	
+	public void practice12() {
+		
+	}
+	public void practice13() {
+		
+	}
 	
 	
 	
