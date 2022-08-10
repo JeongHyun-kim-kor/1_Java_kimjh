@@ -18,7 +18,16 @@ public class LoopRun {
 //		forEx.ex9(); 4교시
 //		forEx.ex10(); 
 //		forEx.ex11(); 
-		forEx.ex12(); 
+//		forEx.ex12(); 
+//		forEx.ex13();5교시
+//		forEx.ex14(); 
+//		forEx.ex15(); 
+//		forEx.ex16(); //6교시 
+//		forEx.ex17();  
+		forEx.ex18();  
+		
+		
+		
 	}
 
 }
