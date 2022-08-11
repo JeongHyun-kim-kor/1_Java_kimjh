@@ -267,101 +267,118 @@ public class BranchExample {
 		   // 컴퓨터는 [바위]를 선택했습니다.
 		   // 졌습니다ㅠㅠ
 		   // 현재 기록 : 1승 1무 1패
-		int rsp = (int)(Math.random() * 3);
+//		int rsp = (int)(Math.random() * 3);
 	    // ---> 0 / 1 / 2
 		// 0 -> 가위 1 -> 바위 2 ->보
+//		String rsp2 = "";
+		
+//		if(rsp == 0) {
+//			rsp2 = "가위";
+//		} else if ( rsp == 1) {
+//			rsp2 = "바위";
+//		} else if ( rsp == 2) {
+//			rsp2 = "보";
+//		}
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("몇판? : ");
+			int input = sc.nextInt();
+			int count = 1;
+			int v =0; // 승
+			int d =0; // 무
+			int f =0; // 패
+		
+		
+		
+		for(int i = 1 ; i <=input ; i++) {
+		System.out.print(count+"번째 게임 \n");
+		
+		int rsp = (int)(Math.random() * 3);
+
 		String rsp2 = "";
 		
 		if(rsp == 0) {
 			rsp2 = "가위";
 		} else if ( rsp == 1) {
-			rsp2 = "바위";
+		rsp2 = "바위";
 		} else if ( rsp == 2) {
 			rsp2 = "보";
 		}
 		
-		Scanner sc = new Scanner(System.in);
-		
-		int input = sc.nextInt();
-		int count = 1;
-		int v =0; // 승
-		int d =0; // 무
-		int f =0; // 패
-		
-		
-		
-		for(int i = 1 ; i <=input ; i++) {
-		System.out.println(count+"번째 게임");
-		
 		System.out.print("가위/바위/보 중 하나를 입력 해주세요 : ");
-		String me = sc.nextLine();
-		if(rsp2 =="가위") {
-			if(me == "바위") {
+		String me = sc.next();
+		if(rsp2 =="가위" && me == "바위") {
+			
 				System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
 				System.out.println("플레이어 승!");
 				v++;
 				count++;
 				System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
-			}
-			if(me == "보") {
+				}
+		else if(rsp2 =="가위" && me == "보") {
 				System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
 				System.out.println("졌습니다ㅠㅠ");
 				f++;
 				count++;
 				System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
-			}
-			if(rsp2.equals(me)) { // 비길때
+				}
+		else	if(rsp2.equals(me)) { // 비길때
 				System.out.println("비겼습니다");
 				d++;
 				count++;
 				System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
-		}	
-			if(rsp2 =="바위") {
-				if(me == "보") {
-					System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
-					System.out.println("플레이어 승!");
-					v++;
-					count++;
-					System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
 				}
-				if(me == "가위") {
-					System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
-					System.out.println("졌습니다ㅠㅠ");
-					f++;
-					count++;
-					System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
-				}
+		if(rsp2 =="바위" && me == "보") {
+			
+			System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
+			System.out.println("플레이어 승!");
+			v++;
+			count++;
+			System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
 			}
-				if(rsp2.equals(me)) { // 비길때
-					System.out.println("비겼습니다");
-					d++;
-					count++;
-					System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
-			}	
-				if(rsp2 =="보") {
-					if(me == "가위") {
-						System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
-						System.out.println("플레이어 승!");
-						v++;
-						count++;
-						System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
-					}
-					if(me == "바위") {
-						System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
-						System.out.println("졌습니다ㅠㅠ");
-						f++;
-						count++;
-						System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
-					}
-					if(rsp2.equals(me)) { // 비길때
-						System.out.println("비겼습니다");
-						d++;
-						count++;
-						System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
-				}	
+	else if(rsp2 =="바위" && me == "가위") {
+			System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
+			System.out.println("졌습니다ㅠㅠ");
+			f++;
+			count++;
+			System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
+			}
+	else	if(rsp2.equals(me)) { // 비길때
+			System.out.println("비겼습니다");
+			d++;
+			count++;
+			System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
+			}
+		if(rsp2 =="보" && me == "가위") {
+			
+			System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
+			System.out.println("플레이어 승!");
+			v++;
+			count++;
+			System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
+			}
+	else if(rsp2 =="보" && me == "가위") {
+			System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
+			System.out.println("졌습니다ㅠㅠ");
+			f++;
+			count++;
+			System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
+			}
+	else	if(rsp2.equals(me)) { // 비길때
+			System.out.println("비겼습니다");
+			d++;
+			count++;
+			System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
+			}
 		
 		
-		} // for문 종료 
+		
+			}// for문 종료 
+			
+				
+				
+		
 	}
 		
 	
@@ -370,8 +387,8 @@ public class BranchExample {
 	
 	
 	
-}
+
 		}
-	}
+	
 	
 	
