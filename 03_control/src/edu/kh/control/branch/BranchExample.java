@@ -242,8 +242,8 @@ public class BranchExample {
 		
 	
 	
-	
 	}
+
 	
 	public void rspGame() {
 		// 가위 바위 보 게임
@@ -282,6 +282,7 @@ public class BranchExample {
 		
 		Scanner sc = new Scanner(System.in);
 		
+		int input = sc.nextInt();
 		int count = 1;
 		int v =0; // 승
 		int d =0; // 무
@@ -289,23 +290,75 @@ public class BranchExample {
 		
 		
 		
-		for(int i = 1 ; i <10 ; i++) {
+		for(int i = 1 ; i <=input ; i++) {
 		System.out.println(count+"번째 게임");
 		
 		System.out.print("가위/바위/보 중 하나를 입력 해주세요 : ");
 		String me = sc.nextLine();
-		
-		System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
-		
-		//rsp2 = String 나도 String
-//		
-		
-		if(rsp2.equals(me)) { // 비길때
-			System.out.println("비겼습니다");
-			d++;
-			count++;
-			System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
-		} else if() // 이길 때
+		if(rsp2 =="가위") {
+			if(me == "바위") {
+				System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
+				System.out.println("플레이어 승!");
+				v++;
+				count++;
+				System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
+			}
+			if(me == "보") {
+				System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
+				System.out.println("졌습니다ㅠㅠ");
+				f++;
+				count++;
+				System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
+			}
+			if(rsp2.equals(me)) { // 비길때
+				System.out.println("비겼습니다");
+				d++;
+				count++;
+				System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
+		}	
+			if(rsp2 =="바위") {
+				if(me == "보") {
+					System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
+					System.out.println("플레이어 승!");
+					v++;
+					count++;
+					System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
+				}
+				if(me == "가위") {
+					System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
+					System.out.println("졌습니다ㅠㅠ");
+					f++;
+					count++;
+					System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
+				}
+			}
+				if(rsp2.equals(me)) { // 비길때
+					System.out.println("비겼습니다");
+					d++;
+					count++;
+					System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
+			}	
+				if(rsp2 =="보") {
+					if(me == "가위") {
+						System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
+						System.out.println("플레이어 승!");
+						v++;
+						count++;
+						System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
+					}
+					if(me == "바위") {
+						System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
+						System.out.println("졌습니다ㅠㅠ");
+						f++;
+						count++;
+						System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
+					}
+					if(rsp2.equals(me)) { // 비길때
+						System.out.println("비겼습니다");
+						d++;
+						count++;
+						System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
+				}	
 		
 		
 		} // for문 종료 
@@ -318,3 +371,7 @@ public class BranchExample {
 	
 	
 }
+		}
+	}
+	
+	
