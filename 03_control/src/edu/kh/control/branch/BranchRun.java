@@ -11,8 +11,9 @@ public class BranchRun {
 //		branchEx.ex3();
 //		branchEx.ex4(); // 0811 6교시
 //		branchEx.ex5(); 
-		branchEx.upDownGame();
-		
+//		branchEx.upDownGame(); // 다시하기@@
+		branchEx.rspGame();
+		 
 	}
 
 }

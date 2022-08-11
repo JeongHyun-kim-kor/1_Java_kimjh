@@ -169,12 +169,56 @@ public class BranchExample {
 		
 		int count = 1;
 		
-		System.out.print(count+"번 입력 : ");
-		int input = sc.nextInt();
+//		System.out.print(count+"번 입력 : ");
 
-		while(input != ran) {
-			System.out.print(count+"번 입력 : ");
+		//선생님
+		while(true) {
+			System.out.print(count+"번 입력 : " );
+			int input = sc.nextInt();
+
+			// 난수 == 입력값이 같을 때 
+			
+			// 난수 > 입력값
+			
+			// 난수 < 입력값
+			
+			if(ran == input) { // 난수 == 입력값이 같을 때 
+				System.out.printf("정답 입니다! (총 입력 횟수 : %d회) \n", count);
+				break; // while문 종료
+				
+			} else if(ran > input) { 			// 난수 > 입력값
+				System.out.println("UP");
+				
+			} else { // 난수 < 입력값
+				System.out.println("DOWN");
+				
+			}
+			
+			
+			count++;
 		}
+		
+		
+		
+		
+//		while(count<=10) {
+//			
+//			System.out.print(count+"번 입력 : ");
+//			
+//			count += 1;
+//			
+//			if(input == ran) {
+//				System.out.println("정답입니다. (총 입력횟수 : )"+ count +"회");
+//				break;
+//		    } else {
+//		    	while(input != ran) {
+//				if(input < ran) {
+//					System.out.println("DOWN");
+//				} else {
+//					System.out.println("UP");
+//				}
+//		    	}
+//		}
 		
 			
 //				if(input == ran) {
@@ -190,7 +234,7 @@ public class BranchExample {
 //			}
 			
 //		}
-		
+//		}
 		
 		
 		
@@ -201,9 +245,74 @@ public class BranchExample {
 	
 	}
 	
+	public void rspGame() {
+		// 가위 바위 보 게임
+		   
+		   // 몇판? : 3
+		   
+		   // 1번째 게임
+		   // 가위/바위/보 중 하나를 입력 해주세요 :  가위
+		   // 컴퓨터는 [보]를 선택했습니다.
+		   // 플레이어 승!
+		   // 현재 기록 : 1승 0무 0패
+		   
+		   // 2번째 게임
+		   // 가위/바위/보 중 하나를 입력 해주세요 :  보
+		   // 컴퓨터는 [보]를 선택했습니다.
+		   // 비겼습니다.
+		   // 현재 기록 : 1승 1무 0패
+		   
+		   // 3번째 게임
+		   // 가위/바위/보 중 하나를 입력 해주세요 :  가위
+		   // 컴퓨터는 [바위]를 선택했습니다.
+		   // 졌습니다ㅠㅠ
+		   // 현재 기록 : 1승 1무 1패
+		int rsp = (int)(Math.random() * 3);
+	    // ---> 0 / 1 / 2
+		// 0 -> 가위 1 -> 바위 2 ->보
+		String rsp2 = "";
+		
+		if(rsp == 0) {
+			rsp2 = "가위";
+		} else if ( rsp == 1) {
+			rsp2 = "바위";
+		} else if ( rsp == 2) {
+			rsp2 = "보";
+		}
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int count = 1;
+		int v =0; // 승
+		int d =0; // 무
+		int f =0; // 패
+		
+		
+		
+		for(int i = 1 ; i <10 ; i++) {
+		System.out.println(count+"번째 게임");
+		
+		System.out.print("가위/바위/보 중 하나를 입력 해주세요 : ");
+		String me = sc.nextLine();
+		
+		System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
+		
+		//rsp2 = String 나도 String
+//		
+		
+		if(rsp2.equals(me)) { // 비길때
+			System.out.println("비겼습니다");
+			d++;
+			count++;
+			System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
+		} else if() // 이길 때
+		
+		
+		} // for문 종료 
+	}
+		
 	
-	
-	
+		
 	
 	
 	
