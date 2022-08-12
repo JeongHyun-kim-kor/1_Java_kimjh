@@ -284,7 +284,8 @@ public class BranchExample {
 		
 		System.out.print("몇판? : ");
 			int input = sc.nextInt();
-			int count = 1;
+			
+		//	int count = 1;
 			int v =0; // 승
 			int d =0; // 무
 			int f =0; // 패
@@ -292,86 +293,137 @@ public class BranchExample {
 		
 		
 		for(int i = 1 ; i <=input ; i++) {
-		System.out.print(count+"번째 게임 \n");
-		
-		int rsp = (int)(Math.random() * 3);
+		System.out.print(i+"번째 게임 \n");
 
-		String rsp2 = "";
-		
-		if(rsp == 0) {
-			rsp2 = "가위";
-		} else if ( rsp == 1) {
-		rsp2 = "바위";
-		} else if ( rsp == 2) {
-			rsp2 = "보";
-		}
-		
 		System.out.print("가위/바위/보 중 하나를 입력 해주세요 : ");
-		String me = sc.next();
-		if(rsp2 =="가위" && me == "바위") {
-			
-				System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
-				System.out.println("플레이어 승!");
-				v++;
-				count++;
-				System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
-				}
-		else if(rsp2 =="가위" && me == "보") {
-				System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
-				System.out.println("졌습니다ㅠㅠ");
-				f++;
-				count++;
-				System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
-				}
-		else	if(rsp2.equals(me)) { // 비길때
-				System.out.println("비겼습니다");
-				d++;
-				count++;
-				System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
-				}
-		if(rsp2 =="바위" && me == "보") {
-			
-			System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
-			System.out.println("플레이어 승!");
-			v++;
-			count++;
-			System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
-			}
-	else if(rsp2 =="바위" && me == "가위") {
-			System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
-			System.out.println("졌습니다ㅠㅠ");
-			f++;
-			count++;
-			System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
-			}
-	else	if(rsp2.equals(me)) { // 비길때
-			System.out.println("비겼습니다");
-			d++;
-			count++;
-			System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
-			}
-		if(rsp2 =="보" && me == "가위") {
-			
-			System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
-			System.out.println("플레이어 승!");
-			v++;
-			count++;
-			System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
-			}
-	else if(rsp2 =="보" && me == "가위") {
-			System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
-			System.out.println("졌습니다ㅠㅠ");
-			f++;
-			count++;
-			System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
-			}
-	else	if(rsp2.equals(me)) { // 비길때
-			System.out.println("비겼습니다");
-			d++;
-			count++;
-			System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
-			}
 		
+		String player = sc.next();
+		
+		// 컴퓨터 가위바위보 지정
+		int ran = (int)(Math.random() * 3);
+
+		String com = "";  // 이걸로 해도 되나
+//		String rsp2 = null;
+		// null : 없다(비슷)
+		
+		// null ; //참조 X
+//		  ""      // 빈 문자열
+		
+//		
+		// 0 , 1 , 2 를 String으로 변환해서 가위바위보로 
+//		if(rsp == 0) {
+//			rsp2 = "가위";
+//		} else if ( rsp == 1) {
+//		rsp2 = "바위";
+//		} else if ( rsp == 2) {
+//			rsp2 = "보";
+//		}
+		
+		 switch(ran) {
+		 case 0 : com = "가위"; break;
+		 case 1 : com = "바위"; break;
+		 case 2 : com = "보"; break;
+		 
+		 }
+		
+		 System.out.printf("컴퓨터는 [%s]를 선택했습니다. \n", com);
+		 
+		 //String 비교시 equals() 사용
+		 if( player.equals(com) ) {
+			 System.out.println("비겼습니다.");
+			 d++;
+		//	 System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
+		 
+		 } else {
+			 
+			 // 이기는 경우
+			 // 플레이어 - 컴퓨터 
+			 // 가위		보
+			 //	바위		가위
+			 // 보		바위
+			 
+			 // 사용자가 이기는 경우에 true가 되는 상황을 미리 변수로 선언
+			 boolean win1 = player.equals("가위") && com.equals("보");
+			 boolean win2 = player.equals("바위") && com.equals("가위");
+			 boolean win3 = player.equals("보") && com.equals("바위");
+			 
+			 if(win1 || win2 || win3)	{
+				 System.out.println("플레이어 승리!");
+				 v++;
+		//		 System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
+				 // 지는 경우
+			 } else {
+				 System.out.println("졌습니다ㅠㅠ");
+				 f++;
+		//		 System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
+			 }
+		 }
+		 System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
+		//
+//		if(rsp2 =="가위" && me == "바위") {
+//			
+//			System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
+//			System.out.println("플레이어 승!");
+//			v++;
+//			count++;
+//			System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
+//		}
+//		else if(rsp2 =="가위" && me == "보") {
+//			System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
+//			System.out.println("졌습니다ㅠㅠ");
+//			f++;
+//			count++;
+//			System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
+//		}
+//		else	if(rsp2.equals(me)) { // 비길때
+//			System.out.println("비겼습니다");
+//			d++;
+//			count++;
+//			System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
+//		}
+//		if(rsp2 =="바위" && me == "보") {
+//			
+//			System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
+//			System.out.println("플레이어 승!");
+//			v++;
+//			count++;
+//			System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
+//		}
+//		else if(rsp2 =="바위" && me == "가위") {
+//			System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
+//			System.out.println("졌습니다ㅠㅠ");
+//			f++;
+//			count++;
+//			System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
+//		}
+//		else	if(rsp2.equals(me)) { // 비길때
+//			System.out.println("비겼습니다");
+//			d++;
+//			count++;
+//			System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
+//		}
+//		if(rsp2 =="보" && me == "가위") {
+//			
+//			System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
+//			System.out.println("플레이어 승!");
+//			v++;
+//			count++;
+//			System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
+//		}
+//		else if(rsp2 =="보" && me == "가위") {
+//			System.out.printf("컴퓨터는 [%s]를 선택했습니다 \n", rsp2);
+//			System.out.println("졌습니다ㅠㅠ");
+//			f++;
+//			count++;
+//			System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
+//		}
+//		else	if(rsp2.equals(me)) { // 비길때
+//			System.out.println("비겼습니다");
+//			d++;
+//			count++;
+//			System.out.printf("현재 기록 : %d승 %d무 %d패 \n", v,d,f);
+//		}
+//		
 		
 		
 			}// for문 종료 
