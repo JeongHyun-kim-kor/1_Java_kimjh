@@ -128,16 +128,6 @@ public class SwitchExample {
 			// 연산 결과를 출력
 			// 단, 나누기(/) 연산 시 0으로는 나눌 수 없도록 한다.
 			
-			Scanner sc = new Scanner(System.in);
-			
-			System.out.print("정수1 입력 : ");
-			int num1 = sc.nextInt();
-			
-			System.out.print("연산자 입력 : ");
-			String op = sc.next();
-			
-			System.out.print("정수2 입력 : ");
-			int num2 = sc.nextInt();
 			
 //			int result1 = num1 + num2;
 			
@@ -158,6 +148,16 @@ public class SwitchExample {
 			// 연산자 입력 : @ 
 			// 정수2 입력 : 3
 			// 존재하지 않는 연산자 입니다.
+			Scanner sc = new Scanner(System.in);
+			
+			System.out.print("정수1 입력 : ");
+			int num1 = sc.nextInt();
+			
+			System.out.print("연산자 입력 : ");
+			String op = sc.next();
+			
+			System.out.print("정수2 입력 : ");
+			int num2 = sc.nextInt();
 			
 //			switch(op) {
 //			case "+" : result1;   

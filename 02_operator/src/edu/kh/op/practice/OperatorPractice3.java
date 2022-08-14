@@ -9,7 +9,7 @@ public class OperatorPractice3 {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("정수 입력 : ");
-		int input1 = sc.nextInt();
+		int input = sc.nextInt();
 		// 양수 / 음수/ 0 
 	//	String result1 = (input1 == 0) ? "0" : (input1 > 0 ? "양수" : "음수");//(조건식 ? t : f); 
 											   // 0을 제외한 모든 수가 올 수 있다. 
@@ -18,10 +18,16 @@ public class OperatorPractice3 {
 
 		
 		//내가 한 것
-		String result = input1 > 0 ? "양수입니다" :
-			(input1 == 0 ? "0 입니다" : "음수입니다.");
-		System.out.println(result);
-		
+//		String result = input1 > 0 ? "양수" :
+//			(input1 == 0 ? "0" : "음수");
+//		System.out.println(result + "입니다.");
+		//t 선생님
+		// 양수 / 음수 / 0
+				//String result = (input == 0) ? "0" : (input > 0 ? "양수" : "음수") ;
+				
+				String result = (input > 0) ? "양수" : (input < 0 ? "음수" : "0") ;
+				
+				System.out.println(result + "입니다.");
 		
 		
 	}
