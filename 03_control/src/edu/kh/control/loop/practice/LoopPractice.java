@@ -123,7 +123,7 @@ public class LoopPractice {
 				for(int i = num1; i <= num2 ; i ++) {
 					System.out.print(i+ " ");
 			} 
-					s
+					
 			 } else {
 				 for(int i = num2; i <= num1 ; i ++) {
 						System.out.print(i+ " ");
@@ -220,6 +220,21 @@ public class LoopPractice {
 		}
 	}
 	
+	public void practice7R() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("정수 입력 : ");
+		int input = sc.nextInt();
+		
+		for(int i = 1; i<= input ; i++) {
+			for(int j = 1; j<=i ; j++) {
+				
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+	}
+	
 	public void practice8() {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("정수 입력 : ");
@@ -234,6 +249,36 @@ public class LoopPractice {
 		}
 	
 	}
+	
+	
+	public void practice8R() {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("정수 입력 : ");
+		int input = sc.nextInt();
+		
+		for(int i = 1 ; i <= input ; i++) {
+			
+			for(int j = input; j >= i ; j--	) {
+				System.out.print("*");
+		}
+		
+			System.out.println();
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	public void practice9() {
 		Scanner sc = new Scanner(System.in);
@@ -286,15 +331,38 @@ public class LoopPractice {
 			}
 			System.out.println();
 		}
+	}
+	
+	public void practice9R() {
 		
-					
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("정수 입력 : ");
+		int num= sc.nextInt();
+		
+		for(int i=1; i<= num ; i++) {
 			
-		
-		
-		
-		
+			for(int j = 1; j <=num; j++) {
+				
+				if(j<=num-i) {
+					System.out.print(" ");
+				}
+				else {
+					System.out.print("*");
+				}
+				
+				
+			}
+			System.out.println();
+			
+		}
 		
 	}
+	
+	
+	
+	
+	
 	public void practice10() {
 		Scanner sc = new Scanner(System.in);
 		
@@ -390,6 +458,30 @@ public class LoopPractice {
 			
 	}
 	}
+		
+
+		public void practice11R() {
+			Scanner sc = new Scanner(System.in);
+			System.out.print("정수 입력 : ");
+			int input= sc.nextInt();
+		
+			for(int h = 1; h<=input ; h++) {
+				
+			for(int y = 1; y<=input*2-1; y++ ) {
+				
+				if(input-h>=y || input + h <= y) {
+					System.out.print(" ");
+				}
+				else {
+				System.out.print("*");
+			}
+			}
+			System.out.println();
+				
+				
+			}
+		
+	}
 	
 	public void practice12() {
 		Scanner sc = new Scanner(System.in);
@@ -413,7 +505,15 @@ public class LoopPractice {
 			System.out.println();
 		}
 		
-		
+	}
+	
+	
+	
+		public void practice12R() {
+			
+			
+			
+			
 		
 		
 		
