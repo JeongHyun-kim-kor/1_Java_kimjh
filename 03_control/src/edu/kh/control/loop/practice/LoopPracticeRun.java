@@ -24,8 +24,11 @@ public class LoopPracticeRun {
 //		lp.practice11();// 미   > 풀이 완
 //		lp.practice11R(); // 다시
 //		lp.practice12();// 미		> 풀이 완
-		lp.practice12R();// 미		> 풀이 완
+//		lp.practice12R();// 미		>복습 완, 다시@
 //		lp.practice13();  // 공배수의 개수 출력은 못함 		> 풀이 완 >> 쉬운 문제였다!!
+		lp.practice13R();  // 복습 // 완료
+		
+		
 		
 	}	
 
