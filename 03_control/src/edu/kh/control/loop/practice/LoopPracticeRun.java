@@ -9,7 +9,9 @@ public class LoopPracticeRun {
 //		lp.practice1();
 //		lp.practice2();
 //		lp.practice3(); 
+//		lp.practice3R();
 //		lp.practice4(); //미해결 > 풀이 완
+		lp.practice4R();
 //		lp.practice5();
 //		lp.practice6(); // 약간 애매 > 풀이 완
 //		lp.practice7();
@@ -18,7 +20,7 @@ public class LoopPracticeRun {
 //		lp.practice10();// 미  > 풀이 완
 //		lp.practice11();// 미   > 풀이 완
 //		lp.practice12();// 미		> 풀이 완
-		lp.practice13();  // 공배수의 개수 출력은 못함 		> 풀이 완 >> 쉬운 문제였다!!
+//		lp.practice13();  // 공배수의 개수 출력은 못함 		> 풀이 완 >> 쉬운 문제였다!!
 		
 	}	
 

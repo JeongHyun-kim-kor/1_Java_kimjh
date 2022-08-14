@@ -9,7 +9,7 @@ public class ConditionPracticeRun {
 //		cp.practice2();
 //		cp.practice3();
 //		cp.practice4();
-		cp.practice5();
+		cp.practice5();  // 다시하기
 
 	}
 

@@ -60,6 +60,26 @@ public class LoopPractice {
 		System.out.println(" = " +sum);
 		
 	}
+	public void practice3R()	{
+		Scanner sc = new Scanner(System.in);
+		System.out.print("정수를 하나 입력하세요 : ");
+		int num = sc.nextInt();
+		int sum = 0 ;
+		
+		for(int i = 1 ; i<=num; i++) {
+			
+			if(i == num) {
+				System.out.print(i + " = ");
+			} else {
+				System.out.print(i+" + ");
+
+			}
+			
+			sum += i;
+		}
+		System.out.println(sum);
+		
+	}
 	public void practice4() {
 		Scanner sc = new Scanner(System.in);
 		
@@ -87,6 +107,29 @@ public class LoopPractice {
 			for(int i = num1; i<= num2; i++) {
 				System.out.print(i + " ");
 			}
+		}
+	}
+		public void  practice4R() {
+			Scanner sc = new Scanner(System.in);
+			System.out.print("첫 번째 숫자 :");
+			int num1 = sc.nextInt();
+			System.out.print("두 번째 숫자 :");
+			int num2 = sc.nextInt();
+			
+			if(num1 < 1 || num2 < 1) {
+				System.out.println("1 이상의 숫자를 입력해주세요.");
+			} 
+			if (num1 < num2)  { // num1 num2 둘다 1미만이 아니다
+				for(int i = num1; i <= num2 ; i ++) {
+					System.out.print(i+ " ");
+			} 
+					
+			 } else {
+				 for(int i = num2; i <= num1 ; i ++) {
+						System.out.print(i+ " ");
+			}
+			 }
+		}
 			
 			
 			
@@ -118,7 +161,7 @@ public class LoopPractice {
 //			}
 //		  }
 		
-		}
+//		}
 			// 나
 //		else if(num1 < num2 || num1 > num2) {
 //			for(int i = num1 ; num1<=num2 ; num1++) {
@@ -131,7 +174,7 @@ public class LoopPractice {
 
 		
 	
-			}
+//			}
 	public void practice5() {
 		
 		Scanner sc = new Scanner(System.in);
