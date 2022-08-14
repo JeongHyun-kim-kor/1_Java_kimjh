@@ -123,7 +123,7 @@ public class LoopPractice {
 				for(int i = num1; i <= num2 ; i ++) {
 					System.out.print(i+ " ");
 			} 
-					
+					s
 			 } else {
 				 for(int i = num2; i <= num1 ; i ++) {
 						System.out.print(i+ " ");
