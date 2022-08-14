@@ -2,7 +2,7 @@ package edu.kh.op.practice;
 
 import java.util.Scanner;
 
-public class OperatorPractice4 {
+public class OperatorPractice4 { //복습
 
 	public static void main(String[] args) {
 
