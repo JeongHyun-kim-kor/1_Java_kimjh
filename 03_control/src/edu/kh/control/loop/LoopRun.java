@@ -13,7 +13,7 @@ public class LoopRun {
 //		forEx.ex4();
 //		forEx.ex5(); 3교시
 //		forEx.ex6(); 
-		forEx.ex7(); 
+//		forEx.ex7(); 
 //		forEx.ex8(); 
 //		forEx.ex9(); 4교시
 //		forEx.ex10(); 
@@ -24,6 +24,7 @@ public class LoopRun {
 //		forEx.ex15(); 
 //		forEx.ex16(); //6교시 
 //		forEx.ex17();  
+		forEx.ex17R();
 //		forEx.ex18();  
 		
 		WhileExample whileEx = new WhileExample();

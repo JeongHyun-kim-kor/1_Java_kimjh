@@ -450,6 +450,35 @@ public class ForExample {
 			
 		}
 		
+		public void ex17R() {
+			// 합계 : sum 
+						// 개수 : count
+						
+						// * count, %(나머지), for문을 이용한 검색
+						// 검색의 시초 ?
+						
+						// 1 부터 20사이의 3의 배수의 개수 출력
+						// ex) 3 6 9 12 15 18
+						// sum:
+						// count : 6
+			Scanner sc = new Scanner(System.in);
+			int sum = 0;
+			int count = 0;
+			for(int i = 1; i<=20; i++) {
+				if(i%3 ==0) {
+					System.out.print(i+" ");
+					sum += i;
+					count ++;
+				}
+			}
+			System.out.println("\n sum : "+ sum);
+			System.out.println("count : " +count);
+			
+			
+		}
+		
+		
+		
 		public void ex18() {
 			
 			// 2중 for문과 count를 이용해서 아래 모양 출력하기

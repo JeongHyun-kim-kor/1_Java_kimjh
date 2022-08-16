@@ -14,10 +14,18 @@ class BasicRun {
 		System.out.println("나이 : "+김정현.age);
 		System.out.println("생년월일 : "+김정현.birthday);
 		
+		//System.out.println("비밀번호 : "+ 김정현.password);
+		
+		//비밀번호를 볼 수 있는 간접 접근 방법(기능을 호출)
+		김정현.showPassword();
+		
+		
 		// 기능 수행
 		김정현.eat();
 		김정현.study();
 		김정현.plus(50, 100);
+		
+		
 	}
 
 }

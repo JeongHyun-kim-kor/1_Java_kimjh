@@ -22,8 +22,11 @@ public class ArrayExampleRun {
 		ArrayExample2 arrayEx2 = new ArrayExample2();
 		
 //		arrayEx2.ex1(); //220816 2교시
-//		arrayEx2.ex2(); 
-//		arrayEx2.ex3(); //220816 3교시 
-		arrayEx2.ex4();
+//		arrayEx2.ex2();
+//		arrayEx2.ex2R();
+//		arrayEx2.ex2RR(); // 선생님이한거
+		arrayEx2.ex3(); //220816 3교시      // 다시하기
+//		arrayEx2.ex3R();
+//		arrayEx2.ex4();
 	}
 }
