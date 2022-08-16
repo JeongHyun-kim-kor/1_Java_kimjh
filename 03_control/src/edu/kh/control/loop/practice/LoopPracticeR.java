@@ -15,7 +15,7 @@ public class LoopPracticeR {
 			for(int j = 0; j<input; j++) { // i :1 >> j : 0
 					    				  // i : 1 > j : 0 1 
 //					System.out.print("*");
-				if(i<=input-i) {
+				if() {
 					System.out.print(" ");
 				}else{
 				
