@@ -383,7 +383,7 @@ public class ArrayExample {
 					}
 				
 				
-				
+					
 			}
 				
 		}
@@ -520,7 +520,7 @@ public class ArrayExample {
 			
 			System.out.println(arr2);
 			
-			// arr2가 참조하는 배열이 없을 때 
+			// arr2가 참조하는 배열이 없을 때 	
 			// 새로운 배열을 생성하여 그 시작 주소를 arr2에 대입
 			if(arr2 == null) {
 				arr2 = new int[4];

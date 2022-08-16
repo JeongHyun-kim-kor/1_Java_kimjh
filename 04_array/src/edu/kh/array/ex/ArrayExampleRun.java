@@ -17,6 +17,13 @@ public class ArrayExampleRun {
 //		arrayEx.createLottoNumber(); // 220812 6교시 
 //		arrayEx.ex9(); // 220812 7교시 
 //		arrayEx.ex10(); 
-		arrayEx.ex11(); 
+//		arrayEx.ex11(); 
+		
+		ArrayExample2 arrayEx2 = new ArrayExample2();
+		
+//		arrayEx2.ex1(); //220816 2교시
+//		arrayEx2.ex2(); 
+//		arrayEx2.ex3(); //220816 3교시 
+		arrayEx2.ex4();
 	}
 }

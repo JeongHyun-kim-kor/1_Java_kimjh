@@ -13,7 +13,7 @@ public class LoopRun {
 //		forEx.ex4();
 //		forEx.ex5(); 3교시
 //		forEx.ex6(); 
-//		forEx.ex7(); 
+		forEx.ex7(); 
 //		forEx.ex8(); 
 //		forEx.ex9(); 4교시
 //		forEx.ex10(); 
@@ -31,7 +31,7 @@ public class LoopRun {
 //		whileEx.ex1();
 //		whileEx.ex2();
 //		whileEx.ex3(); //분식집
-		whileEx.ex4(); // do-while
+//		whileEx.ex4(); // do-while
 		
 	}
 
