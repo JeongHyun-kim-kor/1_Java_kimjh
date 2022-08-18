@@ -59,8 +59,8 @@ public class FieldRun {
 	System.out.println(t1.name);
 	System.out.println(t1.phone);
 	System.out.println(t1.email); // 초기화가 되어 있는가?
-	System.out.println(t1.salary); // 초기화가 되어 있는가?
-	System.out.println(t1.classRoom); // 초기화가 되어 있는가?
+	System.out.println(t1.salary); 
+	System.out.println(t1.classRoom); 
 	
 	
 	
@@ -69,8 +69,8 @@ public class FieldRun {
 	System.out.println(t2.name);
 	System.out.println(t2.phone);
 	System.out.println(t2.email); // 초기화가 되어 있는가?
-	System.out.println(t2.salary); // 초기화가 되어 있는가?
-	System.out.println(t2.classRoom); // 초기화가 되어 있는가?
+	System.out.println(t2.salary); //
+	System.out.println(t2.classRoom); //
 	
 	}
 	
