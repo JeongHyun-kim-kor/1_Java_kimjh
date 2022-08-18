@@ -6,7 +6,7 @@ public class LoopPracticeR {
 	
 	public void practice9() {
 		
-		Scanner sc = new Scanner(System.in);
+/*		Scanner sc = new Scanner(System.in);
 		System.out.print("정수 입력 : ");
 		int input = sc.nextInt();
 		
@@ -14,7 +14,7 @@ public class LoopPracticeR {
 			
 			for(int j = 0; j<input; j++) { // i :1 >> j : 0
 					    				  // i : 1 > j : 0 1 
-//					System.out.print("*");
+					System.out.print("*");
 				if() {
 					System.out.print(" ");
 				}else{
@@ -25,6 +25,8 @@ public class LoopPracticeR {
 			System.out.println();
 			}
 		
-		
+		*/
 	}
+	
+	
 }
