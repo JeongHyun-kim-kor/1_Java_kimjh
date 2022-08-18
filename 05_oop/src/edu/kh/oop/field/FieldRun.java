@@ -35,6 +35,7 @@ public class FieldRun {
 	std1.schoolName ="KH대학 부속 고등학교";  
 	std2.schoolName ="KH대학 부속 고등학교";
 	
+	
 	// static(== 공유 영역) 사용
 	//(Student의 schoonName에 static 추가)
 	
