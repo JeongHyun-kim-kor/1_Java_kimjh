@@ -22,7 +22,7 @@ public class User {
 	// }
 	
 	public void setUserId(String userId) {
-		this.userId = userId;   // 필드 userID에 입력한 userID를 넣어준다
+		this.userId = userId;   // 필드 userID에 입력한 userID 내용을 넣어준다
 	}
 	
 	public void setUserPw(String userPw) {
