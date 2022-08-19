@@ -41,16 +41,47 @@ public class UserService {
 				// id, pw 일치, == 로그인 성공
 				return 1;
 			
-				
 			} else {
 				// 하나라도 다름 == 로그인 실패
 				return 0;
-			}
 			
 		}
+	}
+	}
+	
+	// 회원 정보 수정 Service
+	
+	public void updateUser(String name, int age, char gender, User loginUser ) {
 		
+		loginUser.setUserName(name);
+		loginUser.setUserAge(age);
+		loginUser.setUserGender(gender);
 		
 		
 	}
 	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 }
