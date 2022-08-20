@@ -339,14 +339,28 @@ public class ArrayPractice {
 			for(int col=0; col <arr[row].length-1; col++) {
 				int ran = (int)(Math.random()*10+1);
 				arr[row][col] = ran;
-				System.out.print(arr[row][col]+ "   ");  //3행 3열까지만 난수대입
-			
-			//난수 생성, 3행 3열까지 생긴 난수를 더해서 마지막 열, 행값에 대입
 				
+				// 각 행의 마지막 열 
+				arr[row][arr[row].length-1] += ran; //각행 마지막열전까지 난수 누적
+				arr[arr.length-1][col] += ran;
+				arr[arr.length-1][arr[row].length-1] += ran;
 				
 			}
-			System.out.println();
-		}
+			}
+				
+//				System.out.print(arr[row][col]+ "   ");  //3행 3열까지만 난수대입
+			
+			//난수 생성, 3행 3열까지 생긴 난수를 더해서 마지막 열, 행값에 대입
+				for(int i=0; i<arr.length; i++) {
+					
+					for(int j = 0; j<arr[i].length; j++) {
+						System.out.printf("%3d",arr[i][j]);
+					}
+					System.out.println();
+				}
+				
+			
+	
 		
 	}
 	

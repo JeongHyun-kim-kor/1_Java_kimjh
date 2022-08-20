@@ -173,7 +173,7 @@ public class ArrayExample2 {
 				
 				// 각 행의 마지막 열
 				arr[row][arr[row].length-1] += ran; // 생성된 난수 누적   // row 0, arr[0]의 length = 2 > 1행 1열 / 1행 2열
-																	 // row 1, arr[1] 의 length = 2 > 2행 1열 / 2행 2열
+						//row = 0~2까지, 열은 2까지							 // row 1, arr[1] 의 length = 2 > 2행 1열 / 2행 2열
 				// 각 열의 마지막 행
 				arr[arr.length-1][col] += ran; // 생성된 난수 누적		//  
 				
