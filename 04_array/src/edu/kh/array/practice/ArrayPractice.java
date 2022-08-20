@@ -341,7 +341,8 @@ public class ArrayPractice {
 				arr[row][col] = ran;
 				System.out.print(arr[row][col]+ "   ");  //3행 3열까지만 난수대입
 			
-			
+			//난수 생성, 3행 3열까지 생긴 난수를 더해서 마지막 열, 행값에 대입
+				
 				
 			}
 			System.out.println();
