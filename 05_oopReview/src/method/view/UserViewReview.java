@@ -3,6 +3,7 @@ package method.view;
 import java.util.Scanner;
 
 import method.model.service.UserServiceReview;
+import method.model.vo.UserReview;
 
 public class UserViewReview {
 
@@ -10,6 +11,14 @@ public class UserViewReview {
 	
 	UserServiceReview service = new UserServiceReview();
 	// 메뉴 출력
+	
+	//1. 화원가입
+	private UserReview user = null;
+	
+	// 2. 로그인()
+	private UserReview loginUser = null;
+	// null인 경우 == 로그인 X
+	// null이 아닌경우 == 로그인 O
 	
 	public void displayMenu()	{
 		
@@ -72,7 +81,30 @@ public class UserViewReview {
 		public void login() {
 			
 			System.out.println("[로그인]");
-		
+			
+			if(loginUser != null) {
+				System.out.println("이미 로그인 상태이빈다.");
+			} else {
+				System.out.print("아이디 : ");
+				String id = sc.next();
+				
+				System.out.print("비밀번호 : ");
+				String pw = sc.next();
+				
+					int result = service.login(id, pw, user	);//로그인 서비스 호출
+					// -1 , 0 , 1
+					
+					if(result == -1) {
+						System.out.println("회원 가입 후 시도해주세요");
+						 
+					} else if(result ==0) {
+						System.out.println("아이디 또는 비밀번호가 일치하지 않습니다.");
+					} else {
+						System.out.println("로그인 성공");
+						loginUser = user;
+					}
+			}
+			
 		}
 	
 	

@@ -13,9 +13,11 @@ public class UserView {
 	// UserService 객체 생성
 	private UserService service = new UserService(); 
 	
+	// 1. 회원가입
 	// User 참조 변수 선언(아직 참조하는 객체가 없다.)
 	private User user = null; // 회원 가입 정보를 담고 있는 User 객체 참조
 	
+	//2. 로그인
 	// 로그인한 User 객체의 주소 참조할 변수
 	private User loginUser = null;  // login()에서  loginUser = user; 로 로그인
 	// null인 경우 == 로그인 X
