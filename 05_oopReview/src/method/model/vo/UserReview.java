@@ -32,4 +32,26 @@ public class UserReview {
 		this.userGender = userGender;
 	}
 	
+	//getter : 
+	
+	public String getUserId() {
+		return userId;
+	}
+	
+	public String getUserPw() {
+		return userPw;
+	}
+	
+	public String getUserName() {
+		return userName;
+	}
+	
+	public int getUserAge() {
+		return userAge;
+
+	}
+	
+	public char getUserGender() {
+		return userGender;
+	}
 }
