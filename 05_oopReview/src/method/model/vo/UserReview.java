@@ -9,49 +9,49 @@ public class UserReview {
 	private int userAge;
 	private char userGender;
 	
-	public UserReview() {}
-	
+public UserReview() {
+	// TODO Auto-generated constructor stub
+}	
 	//setter : 매개 변수로 전달 받을 값을 필드에 대입(세팅)
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
-	
-	public void setUserPw(String userPw) {
-		this.userPw = userPw;
-	}
-	
-	public void setUserName(String userName) {
-		this.userName =userName;
-	}
-	
-	public void setUserAge(int userAge) {
-		this.userAge = userAge;
-	}
-	
-	public void setUserGender(char userGender) {
-		this.userGender = userGender;
-	}
-	
-	//getter : 
-	
-	public String getUserId() {
-		return userId;
-	}
-	
-	public String getUserPw() {
-		return userPw;
-	}
-	
-	public String getUserName() {
-		return userName;
-	}
-	
-	public int getUserAge() {
-		return userAge;
 
-	}
+public String getUserId() {
+	return userId;
+}
+
+public void setUserId(String userId) {
+	this.userId = userId;
+}
+
+public String getUserPw() {
+	return userPw;
+}
+
+public void setUserPw(String userPw) {
+	this.userPw = userPw;
+}
+
+public String getUserName() {
+	return userName;
+}
+
+public void setUserName(String userName) {
+	this.userName = userName;
+}
+
+public int getUserAge() {
+	return userAge;
+}
+
+public void setUserAge(int userAge) {
+	this.userAge = userAge;
+}
+
+public char getUserGender() {
+	return userGender;
+}
+
+public void setUserGender(char userGender) {
+	this.userGender = userGender;
+}
 	
-	public char getUserGender() {
-		return userGender;
-	}
 }

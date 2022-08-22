@@ -9,7 +9,7 @@ public class UserViewReview {
 
 	Scanner sc = new Scanner(System.in);
 	
-	UserServiceReview service = new UserServiceReview();
+	private UserServiceReview service = new UserServiceReview();
 	// 메뉴 출력
 	
 	//1. 화원가입
@@ -42,8 +42,8 @@ public class UserViewReview {
 		
 		case 1 : signUp() ; break;
 		case 2 : login(); break;
-		case 3 : ; break;
-		case 4 : ; break;
+		case 3 : logout(); break;
+		case 4 : printUser(); break;
 		case 5 : ; break;
 		case 0 : ; break;
 		default : System.out.println("잘못 입력하셨습니다. ");
@@ -72,7 +72,7 @@ public class UserViewReview {
 		System.out.print("성별(M/F) : ");
 		char gender = sc.next().charAt(0);
 		
-		service.signUp(id, pw, name, age, gender);
+		user = service.signUp(id, pw, name, age, gender);
 		
 		
 		System.out.println("회원 가입 완료");
@@ -85,6 +85,7 @@ public class UserViewReview {
 			if(loginUser != null) {
 				System.out.println("이미 로그인 상태이빈다.");
 			} else {
+				
 				System.out.print("아이디 : ");
 				String id = sc.next();
 				
@@ -107,13 +108,55 @@ public class UserViewReview {
 			
 		}
 	
+	public void logout()	{
+		if(loginUser != null) {
+			loginUser = null;
+			System.out.println("로그아웃 되었습니다.");
+		} else {
+			System.out.println("로그인 후 이용해주세요!");
+		}
+	}
 	
+	public void printUser() {
+		System.out.println("[회원 정보 출력]");
+		
+		if(loginUser != null) { // 로그인되어 있다면!
+			System.out.println("아이디 : " + loginUser.getUserId());
+			System.out.println("이름 : " + loginUser.getUserName());
+			System.out.println("나이 : " + loginUser.getUserAge());
+			
+			String gender = "";
+			if(loginUser.getUserGender() == 'M')
+			{
+				gender = "남성";
+				
+				
+			}else {
+				gender = "여성";
+			}
+			
+		} else {
+			System.out.println("로그인 후 이용해주세요");
+		}
+	}
 	
+	// 이름, 나이, 성별만 수정 가능
+	public void  updateUser()	{
 	
-	
-	
-	
-	
+		System.out.println("[회원 정보 수정]");
+		
+		if(loginUser != null) {
+			System.out.print("수정할 이름 : ");
+			String name = sc.next();
+			System.out.print("수정할 나이 : ");
+			int age = sc.nextInt();
+			System.out.print("수정할 성별 : ");
+			char gender = sc.next().charAt(0);
+			
+			service.updateUser(name, age,  gender,loginUser);
+			System.out.println("회원 정보가 수정되었습니다.");
+		}
+	}
 	
 	
 	
