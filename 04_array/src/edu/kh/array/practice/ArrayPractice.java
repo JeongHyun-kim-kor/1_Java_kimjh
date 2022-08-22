@@ -266,6 +266,88 @@ public class ArrayPractice {
 	
 	
 }
+	public void practice14() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("배열의 크기를 입력하세요 : ");
+		int input = sc.nextInt();
+
+		int count = 1;
+
+		
+		
+		String[] arr = new String[input];
+		
+		for(int i=1; i<=arr.length;i++	) {
+			System.out.printf("%d번째 문자열 : ", i);
+			String munja = sc.next();
+			sc.nextLine();
+			
+			arr[i-1] = munja;
+			
+			if(i == arr.length) {
+				System.out.print("더 값을 입력하시겠습니까?(Y/N) : ");
+				char plus = sc.next().charAt(0);
+			if(plus == 'Y') {
+				
+				System.out.print("더 입력하고 싶은 개수 : ");
+				int plus2 = sc.nextInt();
+				input += plus2;
+				
+					for(int k=1 ; k<=plus2 ; k++) {
+						System.out.printf("%d번째 문자열 : ", (i+k));
+						String munja2 = sc.next();
+						sc.nextLine();
+						arr[i-1] += munja2;
+						
+						if(k == plus2) {
+							System.out.print("더 값을 입력하시겠습니까?(Y/N) : ");
+							char plus3= sc.next().charAt(0);
+//							if()
+							
+						} else {
+							for(int j = 0; j<arr.length;j++) {
+								
+								System.out.print( arr[j] + " "  );
+								}
+							
+						}
+						
+					}
+				
+				
+				
+			} 
+			
+				
+		}
+		}
+		
+			
+//			if(i == arr.length) {
+//				System.out.print("더 값을 입력하시겠습니까?(Y/N) : ");
+//				char plus = sc.next().charAt(0);
+//				
+//				if(plus == 'Y') {
+//				
+//				System.out.print("더 입력하고 싶은 개수 : ");
+//				int plus2 = sc.nextInt();
+//				input += plus2;
+//				}
+//				else {
+//					System.out.print(arr[i]);
+//				}
+//				
+//
+//			}
+//		}
+		
+		
+		
+		
+		
+		
+		
+	}
 	
 	public void practice15() {
 		
@@ -365,9 +447,64 @@ public class ArrayPractice {
 	}
 	
 	
+	public void practice19() {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("행 크기 : ");
+		int row = sc.nextInt();
+		System.out.print("열 크기 : ");
+		int col = sc.nextInt();
+		int [][] arr = new int [row][col];
+		
+		int num2 = 0;
+		
+		if(row < 1 || col <1 || row >10 || col > 10	) {
+			System.out.println("반드시 1~10 사이의 정수를 입력해야 합니다.");
+		} else {
+			for(int i =1; i<=(row*col); i++){
+			int num = (int)(Math.random()*20);
+//			System.out.println(num);
+			
+			
+			}
+			
+			
+			
+			
+		}
+		}
+	
+		
+//		char num2 = (char)num;
+		
+//		System.out.println(num);
+		
+		
+	public void practice20() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("행의 크기 : ");
+		int input = sc.nextInt();
+		int input2 = sc.nextInt();
+		for(int i = 0; i < input ; i++) {
+			System.out.print(i+"열의 크기 : " );
+			int input2 = sc.nextInt();
+		}
+		
+		String [][] arr = new String[input][input2];
+		
+				
+		
+	}
+		
 	
 	
 	
 	
 	
-}
+	
+	
+	
+	
+
+	}
+
