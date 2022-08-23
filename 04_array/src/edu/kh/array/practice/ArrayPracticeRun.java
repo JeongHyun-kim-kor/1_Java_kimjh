@@ -16,16 +16,18 @@ public class ArrayPracticeRun {
 		
 //		ap.practice9(); // 해결 
 //		ap.practice10(); // 해결 하지만 다시하기,
-		ap.practice11(); // 미해결
+//		ap.practice11(); // 미해결
 		
 //		ap.practice12(); // 미해결
 //		ap.practice13(); // 미해결
-//		ap.practice14(); // 미해결
+//		ap.practice14(); // 미해결 > for > while
 		
 //		ap.practice15(); // 해결
 //		ap.practice16(); // 해결(질문함) 1~16 숫자문제
 //		ap.practice17(); // 해결 
 //		ap.practice18(); // 전에했던거 보고..
+//		ap.practice19();
+		ap.practice20();
 	}
 
 }
