@@ -8,7 +8,8 @@ public class Run {
 		// TODO Auto-generated method stub
 		
 		Example e = new Example();
-		e.ex1();
+//		e.ex1();
+		e.ex2();
 	}
 	
 }
