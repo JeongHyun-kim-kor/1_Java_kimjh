@@ -232,41 +232,60 @@ public class ArrayPractice {
 	
 	
 	public void practice11() {
-		System.out.print("발생한 난수 : ");
+//		System.out.print("발생한 난수 : ");
+//		Scanner sc =new Scanner(System.in);
+//		int input = sc.nextInt();
 		int [] arr = new int[10];
 		
 		
-		for(int i=0; i<arr.length;i++) {
+		for(int i=0; i< 10 ;i++) {
 			int nan = (int)(Math.random()*10+1);
 			arr[i] = nan;
-//			 System.out.print(arr[i]+" "); // 출력
-			 
-		
-				
-			}
-		int num = arr[0];
-		boolean flag = false; // 중복 o
-		
-		
-		for(int j=0; j<arr.length; j++) {
 			
-			if(num == arr[j]) {
-				flag = true; //true면 중복x
-				continue;
-			}else {
+			for(int j =0; i<j; j++) {
 				
-				System.out.print(arr[j]+" ");
+			if(arr[j] == nan  ) {
+				i--;
+				break;
 				
+			} 
 			}
-			
-//			if(flag = true) {
+
+			System.out.print(arr[i]+" "); // 출력
+			}
+//		int num = arr[0];
+		
+		
+//		for(int j=0; j<arr.length; j++) {
+//			
+//			if(num == arr[j]) {
+//				j--;
+//				break;
+//			}else {
 //				
-//			}	
-		}
+//				System.out.print(arr[j]+" ");
+//				
+//			}
+//			
+////				
+////			}	
+//		}
 	
 	
 }
 	
+	public void practice14() {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("배열의 크기를 입력하세요 : ");
+		int input = sc.nextInt();
+		
+		for(int i=1; i<= input ; i++) {
+			System.out.printf("%d번째 문자열 : ");
+		}
+		
+		
+	}
 	public void practice15() {
 		
 		int[][] arr = new int[3][3];
