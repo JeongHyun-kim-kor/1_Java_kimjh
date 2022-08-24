@@ -2,7 +2,7 @@ package edu.kh.poly.ex2.model.vo;
 
 public abstract class Animal {
 	
-	// breatt() 라는 추상 매서드를 포함하고 있기 때문에
+	// breath() 라는 추상 매서드를 포함하고 있기 때문에
 	// 해당 클래스는 추상 클래스가 된다.(abstract 작성)
 	
 	
@@ -38,7 +38,7 @@ public abstract class Animal {
 		this.eatType = eatType;
 	}
 	
-	//0824 2r교시
+	//0824 2교시
 	// 미완성된 기능(추상 메서드)
 	
 	public abstract void breath() ;

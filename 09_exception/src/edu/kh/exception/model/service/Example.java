@@ -12,7 +12,7 @@ public class Example {
 	// 예외(Exception) : 소스 코드의 수정으로 해결 가능한 오류
 	
 	// 예외는 두 종류로 구분됨
-	// 1) Checked Exception : 필수적으로 예외처리 구문을 작성 / 반드시 예외 검사를 해야함
+	// 1) Checked Exception   : 필수적으로 예외처리 구문 작성 / 반드시 예외 검사를 해야함
 	// 2) Unchecked Exception : 선택적으로 예외처리 구문 작성
 	
 	
@@ -22,10 +22,23 @@ public class Example {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		System.out.print("입력 : ");
-//		String input = br.readLine(); // == sc.nextLine();
+		//String input = br.readLine(); // == sc.nextLine();
 		
-//		int[] arr 
+		// public String readLine() throws IOException
+		// -> readLine() 메서드는 IOException을 던질 가능성이 있기 때문에
+		// 호출시 반드시 예외처리를 하시오.
+		// --> Checked Exception
 		
+		int[] arr = new int[4];
+		
+		for(int i=0 ; i<= arr.length; i++) {
+			// i가 0부터 4까지 (4는 인덱스 범위 초과)
+			System.out.println(arr[i]);
+		}
+		//ArrayIndexOutOfBoundsException:  Index 4 out of bounds for length 4
+		// -> 코드 작성 시 예외처리를 반드시 하라고 컴파일 에러가 발생하지 않음
+		// 보통 개발자의 실수로 발생하는 예외로
+		// 필수적으로 처리하지 않아도 된다. == Unchecked Exception
 		
 	}
 	

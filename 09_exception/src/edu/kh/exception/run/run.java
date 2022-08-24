@@ -8,10 +8,10 @@ public class run {
 
 
 		Example exam = new Example();
-//		exam.ex1();
+		exam.ex1();
 //		exam.ex2();
 //		exam.ex3();
-		exam.ex4();
+//		exam.ex4();
 
 	}
 
