@@ -2,8 +2,8 @@ package edu.kh.poly.ex2.model.vo;
 
 public abstract class Animal {
 	
-	// breatt() 라는 추상 매서드를 포함하고 
-	
+	// breatt() 라는 추상 매서드를 포함하고 있기 때문에
+	// 해당 클래스는 추상 클래스가 된다.(abstract 작성)
 	
 	
 	// 필드
@@ -44,7 +44,7 @@ public abstract class Animal {
 	public abstract void breath() ;
 	
 	// -> 자식 클래스에 추상 메서드의 이름만을 공통적으로 제공
-	// -> 상속 받은 자식이 해당 메서드를
+	// -> 상속 받은 자식이 해당 메서드를 강제 오버라이딩
 	
 	
 	
