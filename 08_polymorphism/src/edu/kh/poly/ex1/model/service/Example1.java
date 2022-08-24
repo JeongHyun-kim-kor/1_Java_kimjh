@@ -43,6 +43,7 @@ public class Example1 {
 //					 참조하는 객체의 실제 타입의 오버라이딩된 메서드와 연결된다.
 					// 자식이 오버라이드한 것이 우선이기 때문에
 		System.out.println(c2.toString());  
+		//String edu.kh.poly.ex1.model.vo.Car.toString()  [정적 바인딩]
 						// Car c2
 		// 정적바인딩으로는 wheel seat fuel만 나오는데(실행전)
 		// 실행하니까 wheel seat fuel , 적재중량까지나옴 (동적바인딩)
@@ -165,7 +166,7 @@ public class Example1 {
 		
 		// - instanceof연산자
 		// 1) 참조하는 객체의 타입을 검사하는 연산자
-		// 2) 참조하는 객체가 특정 타입을 상속받았는지 검사
+		// 2) 참조하는 객체가 특정 타입을 상속받았는지 검사 
 		
 		Car c = new Spark(); // 업 캐스팅
 		

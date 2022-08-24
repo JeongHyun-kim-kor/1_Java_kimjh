@@ -12,7 +12,7 @@ public /* final */ class Parent {
 	public /*final*/ void method1() {
 		
 		// final 변수 : 상수
-		final int NUM = 10;
+//		final int NUM = 10;
 		
 		System.out.println("부모의 메서드");
 	}
