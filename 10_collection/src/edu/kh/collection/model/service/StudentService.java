@@ -13,8 +13,8 @@ public class StudentService {
 
 	public StudentService() {
 		stdList.add(new Student("홍길동", 18, "서울시 강남구", 'M', 80));
-		stdList.add(new Student("감갈순", 17, "서울시 중랑구", 'F', 90));
-		stdList.add(new Student("ㄱ나다", 19, "격이도 붗천시", 'M', 50));
+		stdList.add(new Student("김길순", 17, "서울시 중랑구", 'F', 90));
+		stdList.add(new Student("가나다", 19, "경기도 부천시", 'M', 50));
 		
 	}
 	

@@ -53,7 +53,7 @@ public class SetService {
 		
 		Iterator<String> it = set.iterator();
 		
-		// Set.iterator();
+//		 Set.iterator();
 		// set에 저장된 객체를 이용해서 Iterator 객체를 만들어 반환
 		
 		while(it.hasNext()) {
