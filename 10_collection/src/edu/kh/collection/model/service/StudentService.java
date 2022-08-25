@@ -124,6 +124,54 @@ public class StudentService {
 		
 	}
 	
-	
-	
- }
+	/** 일치하는 이름 검색
+	 * @param name
+	 * @return resultList
+	 */
+	public List<Student> selectStudent1(String name) {
+		
+		List<Student> resultList = new ArrayList<Student>();
+		
+		// 향상된 for문
+		for(Student s : stdList ) {
+			
+			if( s.getName().equals(name)) { // 검색한 이름과 학생 이름이 동일한경우
+				
+				resultList.add(s); // s가 참조하고 있는 것을 resultList에 넣겠다.
+				
+			}
+			
+		}
+		
+		
+		
+		
+		
+		
+		return resultList;
+	}
+
+	/** 포함하는 이름 검색
+	 * @param name
+	 * @return resultList
+	 */
+	public List<Student> selectStudent2(String name) {
+		List<Student> resultList = new ArrayList<Student>();
+		
+		// 향상된 for문
+		for(Student s : stdList ) {
+			
+			// 검색한 이름과 학생 이름에 포함되어 있는 경우
+			if( s.getName().contains(name)) {
+				//String.contains(값) : 문자열에  값이 포함되어
+				
+				
+				resultList.add(s); // s가 참조하고 있는 것을 resultList에 넣겠다.
+				
+			}
+			
+		}
+		return resultList;
+
+	}
+}
