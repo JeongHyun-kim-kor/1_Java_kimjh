@@ -121,7 +121,52 @@ public class SetService {
 		public void ex3() {
 			
 			// TreeSet : 오름차순으로 정렬되고 중복이 제거되는 Set
-			// Wrapper Class : 
+			// Wrapper Class 
+			// * 컬렉션은 객체만 저장가능(기본 자료형X)
+			//   --> 컬렉션에 기본 자료형도 저장할 수 있는 방법 필요
+			//  	--> 기본 자료형을 포장하여 객체처럼 만듦.
+			
+			// 첫 글자 대문자
+			// boolean -> Boolean 
+			// byte    -> Byte
+			// short   -> Short
+			// int     -> Integer
+			// long    -> long
+			// float   -> Float
+			// double  -> Double
+			// char    -> Character
+			
+			// Wrapper 클래스는 기본 자료형 값 + 추가 필드, 메서드 제공
+								//클래스명, 필드명
+			System.out.println(Integer.MAX_VALUE );
+			 
+			int num = Integer.parseInt( "123") ;
+			// 문자열이지만 내용이 모두 숫자인 문자열이 존재
+			// -> Wrapper 클래스의 ParseXXX () 를 이용하면 숫자로 변경 가능
+			// String ---> 숫자형(int, double)
+			System.out.println(num + 100); // 223 이 나오나?
+			
+			double dNum = Double.parseDouble("123.123");
+			System.out.println(dNum +100); // 223.123			
+			
+			// parsing : 데이터의 형식 자체를 바꾸는 것
+			
+			// Auto Boxing(자동 포장)
+			Integer i1 = 10; // (Integer = int)
+							 // Integer = new Integer(int) // 컴파일러가 바꿔줌
+			
+			
+			// Auto UnBoxing(자동 포장 해제)
+			int i2 = i1; // int에다가 Integer를 대입 
+						 // int = Integer.intValue(); > int값 반환
+			
+			
+			
+			
+			
+			
+			
+			
 			
 			Set<Integer> lotto =  new TreeSet<Integer>();
 			
@@ -130,7 +175,7 @@ public class SetService {
 			while(lotto.size() <6) {
 				int ran = (int)(Math.random() *45 + 1); // 1 ~ 45난수
 				
-				lotto .add(ran);
+				lotto.add(ran);
 			}
 			System.out.println(lotto); // 로또번호 출력
 			
