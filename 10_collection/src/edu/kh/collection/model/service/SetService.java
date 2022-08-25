@@ -3,6 +3,9 @@ package edu.kh.collection.model.service;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
+import java.util.TreeSet;
+
+import edu.kh.collection.model.vo.Student;
 
 public class SetService {
 
@@ -72,9 +75,66 @@ public class SetService {
 		}
 		
 	}
+		
+		public void ex2() {
+			
+			/* Set에 저장된 객체가 중복임을 판단하는 방법
+			 * 
+			 * - 필드에 저장된 값이 모두 일치하면 중복으로 판단
+			 *   -> 중복 판단에 사용하는 메서드
+			 *      Object.equals() 메서드의 오버라이딩된 메서드
+			 * 		-> Student 오버라이딩 
+			 * 
+			 * Hash라는 단어가 붙은 컬렉션이 중복을 판단하는 방법
+			 *  -> Object.hashCode() 오버라이딩
+			 *    
+			 *    Hash 함수 : 입력된 단어를 지정된 길이의 무작위 문자열로 변환하는 함수
+			 *    
+			 *    hashCode() : 객체에 저장된 필드를 이용해서 만들어진 정수를 반환
+			 *    
+			 *    
+			 *    HashSet - equals, hashCode() 둘 다 오버라이딩 되어 있어야함!!!!!!
+			 * 
+			 * 		->  equals() 또는 hashCode()를 오버라이딩 하면
+			 *      나머지 하나도 반드시 오버라이딩 진행해야함
+			 */
+			
+			Set<Student> set = new  HashSet<Student>();
+			
+
+			set.add(new Student("홍길동", 15, "서울시 중구", 'M', 50));
+			set.add(new Student("김길순", 17, "서울시 종로구", 'F', 100));
+			set.add(new Student("홍길동", 15, "서울시 중구", 'M', 50));
+			
+			Student s1 =  new Student("김길순", 17, "서울시 종로구", 'F', 5);
+			Student s2 =  new Student("김길순", 17, "서울시 종로구", 'F', 100);
+			
+			System.out.println(s1.equals(s2));
+			
+			
+			for(Student s : set) {
+				System.out.println(s);
+			}
+			
+		}
 	
-	
-	
+		public void ex3() {
+			
+			// TreeSet : 오름차순으로 정렬되고 중복이 제거되는 Set
+			// Wrapper Class : 
+			
+			Set<Integer> lotto =  new TreeSet<Integer>();
+			
+			// Integer -> int의 Wrapper Class
+			
+			while(lotto.size() <6) {
+				int ran = (int)(Math.random() *45 + 1); // 1 ~ 45난수
+				
+				lotto .add(ran);
+			}
+			System.out.println(lotto); // 로또번호 출력
+			
+		}
 	
 	
 	
