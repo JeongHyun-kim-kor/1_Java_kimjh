@@ -73,6 +73,7 @@ public class ServerService {
 			clientSocket = serverSocket.accept(); // 수락
 			// -> 클라이언트의 요청이 오고 수락이 될 때까지 무한 대기
 			
+			System.out.println("[클라이언트 접속 성공]");
 			
 			
 //		5. 연결된 클라이언트와 입출력 스트림 생성
@@ -101,18 +102,40 @@ public class ServerService {
 			
 		String str = sdf.format(now) + " [서버 접속 성공]";
 		
-		pw.print(str); // 서버-> 클라이언트로 출력
+		pw.println(str); // 서버-> 클라이언트로 출력
 		pw.flush(); // flush() : 스트림의 내용을 밀어냄
+		
+		// 클라이언트 -> 서버 메시지 전달받기
+		String clientMessage = br.readLine();
+		
+		String clientIP = clientSocket.getInetAddress().getHostAddress();
+						// 클라이언트 IP
+		
+		// 클라이언트 메시지 출력
+		System.out.println(clientIP + "가 보낸 메시지 : " + clientMessage);
+		
 		
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
 			
 //		8. 통신 종료
+			
+			try {
+				//스트림/소켓 닫기
+				
+				if(br != null) br.close(); // + is.close()
+				if(pw != null) pw.close(); // + os.close() 
+				// 보조스트림을 닫으면 연결된 기반 스트림도 같이 닫게된다!
+				
+				if(serverSocket != null) serverSocket.close();
+				if(clientSocket != null) clientSocket.close();
+				
+				
+			}catch (IOException e) {
+			e.printStackTrace();
+			}
 		}
-		
-		
-
 		
 		
 		
