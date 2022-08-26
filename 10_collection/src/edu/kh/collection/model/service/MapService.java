@@ -2,6 +2,10 @@ package edu.kh.collection.model.service;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeMap;
+import java.util.TreeSet;
 
 import edu.kh.collection.model.vo.Student;
 
@@ -83,10 +87,74 @@ public class MapService {
 		
 		// 새로운 필드의 추가 Map 유리, vo사용빈도가 적을 때 Map사용에 좋다
 		// vo= 100줄짜리 클래스, 몇번안쓰면 메모리 아깝다.
+		
+		
+		
+		//0826 2교시
+		
+		//value 각각 얻어와서 출력하기
+		//std
+		System.out.println(std.getName());
+		System.out.println(std.getAge());
+		System.out.println(std.getAddress());
+		System.out.println(std.getGender());
+		System.out.println(std.getScore());
+		
+		System.out.println("---------------------------");
+		
+//		// student(map)
+//		System.out.println(student.get("name"));
+//		System.out.println(student.get("age"));
+//		System.out.println(student.get("address"));
+//		System.out.println(student.get("gender"));
+//		System.out.println(student.get("score"));
+		
+		// >> 반복문 적용
+		// keySet() : Map에서 key부분만을 추출하여 Set 형태로 반환
+		
+		//for/while/if문 작성시 { } 가 없다면
+		// 다음 한 줄(다음 세미콜론까지)에만 영향을 미친다.
+		for(String key : student.keySet() ) 
+			System.out.println(student.get(key));
+						// Set<String>
+	
+		
 	}
 	
-	
-	
+	public void ex3() {
+		
+		Map<String, Set<Integer> > map = new TreeMap<>();//Map  // TreeSet  > treeMap> 순서잘나옴
+		// 타입 추론 : 참조 변수의 제네릭을 보고 
+//					생성되는 컬렉션 객체의 제네릭을 추측함
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("횟수 입력 : ");
+		int count = sc.nextInt();
+		
+		// 생성
+		for(int i=1; i<=count; i++) {
+			
+			// TreeSet을 이용해서 로또 번호 생성
+			Set<Integer> lotto = new TreeSet<>();
+			
+			while(lotto.size() < 6) {
+				
+				int ran =(int)(Math.random()*45 +1); // 1~45
+				lotto.add(ran);
+				
+			}
+			
+			map.put(i + "회", lotto);
+		}
+		// 출력
+		for(String key : map.keySet()) {
+			
+			System.out.println(key + " : " +map.get(key)); // key에 해당하는 value
+			
+		}
+		
+	}
 	
 	
 	
