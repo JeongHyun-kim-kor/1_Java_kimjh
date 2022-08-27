@@ -40,7 +40,7 @@ public class ServerService {
 	 * 
 	 * 
 	 */
-	
+	//복습
 	
 	public void serverStart() {
 //		1. 서버의 포트번호 정함

@@ -178,6 +178,7 @@ public class IOService {
 			int value = 0;
 			
 			while(true) {
+				
 				value = bis.read();
 				// 바이트 스트림이기 때문에 1byte 읽어오지만
 				// 한글 같은 2byte문자가 버퍼에 쌓이면서 깨졌던 모양이 복구됨
