@@ -20,7 +20,7 @@ public class MapService {
 	 * 		  -> List의 특징을 지님(중복 O)
 	 * 
 	 * 
-	 * asdasds
+	 * 
 	 */
 	
 	public void ex1() {
