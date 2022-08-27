@@ -9,6 +9,6 @@ public class ServerRun {
 		ServerService service = new ServerService();
 		
 		service.serverStart();
-		//?
+		
 	}
 }
