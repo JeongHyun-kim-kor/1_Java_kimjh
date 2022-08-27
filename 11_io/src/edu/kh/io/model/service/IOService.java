@@ -19,7 +19,7 @@ public class IOService {
 
 	// 문자 기반 스트림 : 문자 단위(2byte)로 데이터를 입/출력하는 스트림.
 	// -> 문자 데이터(채팅, 코드, 데이터) 입/출력
-
+	// 복습중
 	public void output() {
 
 		String content = "Hello world\n" + "1234567890\n" + "오늘은 금요일 입니다." + "점심 어떤게 좋을까요?";
@@ -32,6 +32,7 @@ public class IOService {
 
 		// 문자 기반 파일 출력 스트림
 		FileWriter fw = null;
+			
 
 		try {
 			fos = new FileOutputStream("byte/byteTest.txt", true);
