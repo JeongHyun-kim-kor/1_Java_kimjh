@@ -67,7 +67,8 @@ public class ListService {
 			// 얻어온 요쇼가 Student이면 학생의 이름을 출력하겠다.
 			
 			if(list.get(i) instanceof Student) {
-				System.out.println(   ( (Student)list.get(i) ).getName()   );
+//				System.out.println(   ( (Student)list.get(i) ).getName()   );
+				System.out.println(   ( list.get(i)   ));
 			}  // list.get(i).getName() >> XX
 		}
 		

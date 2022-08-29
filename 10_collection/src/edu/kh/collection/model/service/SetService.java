@@ -35,7 +35,7 @@ public class SetService {
 		
 		
 		// remove(int index) index 없음
-		// remove(Object value) 써야 함 : Set에 저장된 객체 중 valuer가 같은 객체 제거
+		// remove(Object value) 써야 함 : Set에 저장된 객체 중 value가 같은 객체 제거
 		// -> boolean 반환
 		// 제거 되면 ture / 안되면 false
 		set.remove("직방"	);

@@ -25,7 +25,7 @@ public class Run {
 		MapService service3 = new MapService();
 		
 //		service3.ex1();
-//		service3.ex2();
-		service3.ex3();
+		service3.ex2();
+//		service3.ex3();
 	}
 }
