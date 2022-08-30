@@ -37,12 +37,12 @@ public class EmployeeView {
 		
 		case 1 : addEmployee(); break;
 		case 2 : selectAll(); break;
-		case 3 : selectEmployee();break;
-		case 4 : updateEmployee();break;
-		case 5 : removeEmployee();break;
-		case 6 : departmentSelect();break;
-		case 7 : salarySelect();  break;
-		case 8 : departmentSalarySelect(); break;
+		case 3 : selectEmployee(); break;
+//		case 4 : updateEmployee();break;
+//		case 5 : removeEmployee();break;
+//		case 6 : departmentSelect();break;
+//		case 7 : salarySelect();  break;
+//		case 8 : departmentSalarySelect(); break;
 		case 0 : System.out.println("프로그램 종료."); break;
 		default : System.out.println("잘못 입력하셨습니다.");
 		}
@@ -58,6 +58,11 @@ public class EmployeeView {
 	
 	
 	
+
+	
+
+
+
 
 	public void addEmployee() {
 		
@@ -110,7 +115,7 @@ public class EmployeeView {
 	
 	
 
-	public void selectEmpolyee() {
+	public void selectEmployee() {
 		
 		System.out.println("[사번과 일치하는 사원 정보 조회]");
 		
@@ -121,7 +126,6 @@ public class EmployeeView {
 		
 		
 	}
-	
 	
 	
 
