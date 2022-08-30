@@ -38,7 +38,7 @@ public class EmployeeView {
 		case 1 : addEmployee(); break;
 		case 2 : selectAll(); break;
 		case 3 : selectEmployee(); break;
-//		case 4 : updateEmployee();break;
+		case 4 : updateEmployee();break;
 //		case 5 : removeEmployee();break;
 //		case 6 : departmentSelect();break;
 //		case 7 : salarySelect();  break;
@@ -124,10 +124,27 @@ public class EmployeeView {
 		
 		List<Employee> resultList = service.selectEmployee(num);
 		
-		
+		if(resultList.isEmpty()) {
+			System.out.println("검색 결과가 없습니다.");
+		} else {
+			for(Employee e : resultList) {
+				System.out.println(e);
+			}
+		}
 	}
 	
-	
+	public void  updateEmployee() {
+		
+		System.out.println("사번과 일치하는 사원 수정");
+		
+		System.out.print("사번 : ");
+		int num = sc.nextInt();
+		sc.nextLine();
+		
+		System.out.print();
+		
+		
+	}
 
 	
 	

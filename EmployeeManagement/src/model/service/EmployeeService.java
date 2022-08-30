@@ -30,10 +30,19 @@ public class EmployeeService {
 
 
 	public List<Employee> selectEmployee(int num) {
-
 		
+		List<Employee> resultList = new ArrayList<Employee>();
 		
-		return null;
+		for(Employee e : empList) {
+			
+			if(e.getEmpId() == num) {
+				resultList.add(e);
+			}
+			
+			
+		}
+		
+		return resultList;
 	}
 
 	
