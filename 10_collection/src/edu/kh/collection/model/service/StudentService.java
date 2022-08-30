@@ -33,7 +33,6 @@ public class StudentService {
 		
 		
 		
-		
 //		// 제네릭 확인 테스트
 //		List test1 = new ArrayList() ;
 //		
