@@ -60,8 +60,37 @@ public class EmployeeView {
 	public void addEmployee() {
 		
 		System.out.println("[새로운 사원 정보 추가]");
+		System.out.print("사원 번호(사번) : ");
+		int empId = sc.nextInt();
+		sc.nextLine();
+	System.out.print("사원 이름 : ");
+		String empName = sc.nextLine();
 		
+	System.out.print("주민등록번호 : ");
+		String empNo = sc.nextLine();
 		
+	System.out.print("이메일 : ");
+		String email = sc.nextLine();
+		
+	System.out.print("전화번호 : ");
+		String phone = sc.nextLine();
+		
+	System.out.print("부서명 : ");
+		String departmentTitle = sc.nextLine();
+		
+	System.out.print("직급명 : ");
+		String jobName = sc.nextLine();
+		
+	System.out.print("급여 : ");
+	int salary = sc.nextInt();
+	if(service.addEmployee(empId, empName, empNo, email, phone, departmentTitle, jobName, salary)) {
+		
+		System.out.println("[추가 완료]");
+		System.out.println();
+		
+	} else {
+		System.out.println("추가 실패");
+	}
 	}
 
 	

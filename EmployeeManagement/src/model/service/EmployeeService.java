@@ -7,18 +7,27 @@ import model.vo.Employee;
 
 public class EmployeeService {
 
-	private List<Employee> empList = new ArrayList<Employee>();
 	
+	
+	private List<Employee> empList = new ArrayList<Employee>();
 	
 	public boolean addEmployee(int empId, String empName, String empNo, String email, String phone,
 			String departmentTitle, String jobName, int salary) {
 
-		Employee emp = new Employee(empId, empName, empNo, email, phone, departmentTitle, jobName, salary) ;
-			
-		
+		Employee emp = new Employee(empId, empName, empNo, email, phone, departmentTitle, jobName, salary);
 		
 		return empList.add(emp);
 	}
+	
+//	public boolean addEmployee(int empId, String empName, String empNo, String email, String phone,
+//			String departmentTitle, String jobName, int salary) {
+//
+//		Employee emp = new Employee(empId, empName, empNo, email, phone, departmentTitle, jobName, salary) ;
+//			
+//		
+//		
+//		return empList.add(emp);
+//	}
 
 
 	public List<Employee> getEmpList() {
@@ -44,6 +53,9 @@ public class EmployeeService {
 		
 		return resultList;
 	}
+
+
+	
 
 	
 }
