@@ -36,9 +36,9 @@ public class EmployeeView {
 		switch(input) {
 		
 		case 1 : addEmployee(); break;
-		case 2 : selectAll(); break;
-		case 3 : selectEmployee(); break;
-		case 4 : updateEmployee();break;
+//		case 2 : selectAll(); break;
+//		case 3 : selectEmployee(); break;
+//		case 4 : updateEmployee();break;
 //		case 5 : removeEmployee();break;
 //		case 6 : departmentSelect();break;
 //		case 7 : salarySelect();  break;
@@ -57,7 +57,12 @@ public class EmployeeView {
 	}
 	
 	
-	
+	public void addEmployee() {
+		
+		System.out.println("[새로운 사원 정보 추가]");
+		
+		
+	}
 
 	
 
