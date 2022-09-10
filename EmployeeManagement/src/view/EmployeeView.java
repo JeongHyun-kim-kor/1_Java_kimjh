@@ -37,8 +37,8 @@ public class EmployeeView {
 		
 		case 1 : addEmployee(); break;
 		case 2 : selectAll(); break;
-//		case 3 : selectEmployee(); break;
-//		case 4 : updateEmployee();break;
+		case 3 : selectEmployee(); break;
+		case 4 : updateEmployee();break;
 //		case 5 : removeEmployee();break;
 //		case 6 : departmentSelect();break;
 //		case 7 : salarySelect();  break;
@@ -104,57 +104,67 @@ public class EmployeeView {
 	}
 	
 
+	public void selectEmployee() {
+		
+		System.out.println("[사번과 일치하는 사원 정보 조회]");
+		
+		System.out.print("사번 입력 : ");
+		int num = sc.nextInt();
+		
+		List<Employee> resultList = service.selectEmployee(num);	
+		
+		if(resultList.isEmpty()) {
+			System.out.println("결과 X");
+		} else {
+			for(Employee e : resultList) {
+				System.out.println(e);
+			}
+		}
+	}
 
 
+	/** 4. 사번이 일치하는 사원 정보 수정
+	 * 
+	 */
+	public void  updateEmployee() {
+		
+		System.out.println("사번과 일치하는 사원 수정");
+		
+		System.out.print("수정할 사원의 사번 : ");
+		int num = sc.nextInt();
+		sc.nextLine();
+		
+		System.out.print("이메일 : ");
+		String email = sc.next();
+		
+		System.out.print("전화번호 : ");
+		String phone = sc.next();
+		
+		System.out.print("부서명 : ");
+		String departmentTitle = sc.next();
+		
+		System.out.print("직급명 : ");
+		String jobName = sc.next();
+		
+		System.out.print("급여 : ");
+		int salary = sc.nextInt();
+		
+		if(service.updateEmployee(num, email, departmentTitle, jobName, salary)){
+			System.out.println("사원번호" + num+ "수정 완료");
+			
+		} else {
+			System.out.println("실패, 해당 사원 번호와 일치하는 사원 없습니다.");
+		}
+		
+		
+	}
 
-//	public void selectAll() {
-//		
-//		List<Employee> empList = service.getEmpList();
-//		
-//		for(int i = 0; i < empList.size(); i++) {
-//			System.out.println(empList.get(i));
-//		}
-//	}
-//	
-//	
-//
-//	public void selectEmployee() {
-//		
-//		System.out.println("[사번과 일치하는 사원 정보 조회]");
-//		
-//		System.out.print("사번 입력 : ");
-//		int num = sc.nextInt();
-//		
-//		List<Employee> resultList = service.selectEmployee(num);
-//		
-//		if(resultList.isEmpty()) {
-//			System.out.println("검색 결과가 없습니다.");
-//		} else {
-//			for(Employee e : resultList) {
-//				System.out.println(e);
-//			}
-//		}
-//	}
-//	
-//	public void  updateEmployee() {
-//		
-//		System.out.println("사번과 일치하는 사원 수정");
-//		
-//		System.out.print("사번 : ");
-//		int num = sc.nextInt();
-//		sc.nextLine();
-//		
-//		System.out.print();
-//		
-//		
-//	}
-//
-//	
-//	
-//	
-//	
-//	
-//	
+	
+	
+	
+	
+	
+	
 	
 }
 	
