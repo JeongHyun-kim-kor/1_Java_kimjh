@@ -145,8 +145,25 @@ public class EmployeeService {
 
 
 	
+		
+	
+
+	/** 7. 입력 받은 급여 이상을 받는 모든 사원 정보 조회
+	 * @param num
+	 */
+	public List <Employee> salarySelect(int num) {
+		List <Employee> resultList = new ArrayList<>();
+		
+		for(Employee e : resultList) {
+			if(e.getSalary() >= num) {
+				resultList.add(e);
+				
+			}
+		}
+		return resultList;
+	}
 
 	
 
-
 }
+
