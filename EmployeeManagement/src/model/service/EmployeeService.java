@@ -83,7 +83,6 @@ public class EmployeeService {
 	 * @return 입력한 사원번호 있으면 수정후 true, 없으면 false
 	 */
 	public boolean updateEmployee(int num, String email, String departmentTitle, String jobName, int salary) {
-		Employee emp = null;
 		
 		for(Employee e : empList) {
 		
@@ -105,12 +104,49 @@ public class EmployeeService {
 
 
 
+	
+	
+	/** 5. 사번이 일치하는 사원 정보 삭제
+	 * @param num
+	 */
+	public boolean removeEmployee(int num) {
 		
+		for (Employee e : empList) {
+		if(num == e.getEmpId()) {
+			
+			empList.remove(e);
+			return true;
+		}
+	
+		}
+		return false;
+	}
+
+		
+	/** 6. 입력 받은 부서와 일치하는 모든 사원 정보 조회
+	 * @param dept
+	 * @return
+	 */
+	public List<Employee> departmentSelect(String dept) {
+		List<Employee> resultList = new ArrayList<>();
+		
+		for(Employee e : empList) {
+			if(dept == e.getDepartmentTitle()) {
+				resultList.add(e);
+				
+			}
+			
+		}
+		
+		
+		return resultList;
+	}
 
 
 
 	
 
 	
+
 
 }

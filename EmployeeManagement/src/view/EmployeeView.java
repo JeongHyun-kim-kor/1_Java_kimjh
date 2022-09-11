@@ -39,8 +39,8 @@ public class EmployeeView {
 		case 2 : selectAll(); break;
 		case 3 : selectEmployee(); break;
 		case 4 : updateEmployee();break;
-//		case 5 : removeEmployee();break;
-//		case 6 : departmentSelect();break;
+		case 5 : removeEmployee();break;
+		case 6 : departmentSelect();break;
 //		case 7 : salarySelect();  break;
 //		case 8 : departmentSalarySelect(); break;
 		case 0 : System.out.println("프로그램 종료."); break;
@@ -57,6 +57,10 @@ public class EmployeeView {
 	}
 	
 	
+	/**
+	 * 1. 새로운 사원 정보 추가
+
+	 */
 	public void addEmployee() {
 		
 		System.out.println("[새로운 사원 정보 추가]");
@@ -93,6 +97,9 @@ public class EmployeeView {
 	}
 	}
 
+	/**
+	 * 2.전체 사원 정보 조회
+	 */
 	public void selectAll() {
 		
 		List<Employee> empList = service.getEmpList();
@@ -104,6 +111,9 @@ public class EmployeeView {
 	}
 	
 
+	/**
+	 * 3. 사번이 일치하는 사원 정보 조회
+	 */
 	public void selectEmployee() {
 		
 		System.out.println("[사번과 일치하는 사원 정보 조회]");
@@ -160,16 +170,46 @@ public class EmployeeView {
 	}
 
 	
+	/**
+	 * 5. 사번이 일치하는 사원 정보 삭제
+
+	 */
+	public void removeEmployee() {
+		System.out.print("삭제할 사원의 번호 : ");
+		int num = sc.nextInt();
+		if(service.removeEmployee(num)) {
+			System.out.println("삭제되었습니다.");
+		} else {
+			System.out.println("사번을 잘못 입력하셨습니다.");
+		}
+	}
 	
+	/**
+	 * 6. 입력 받은 부서와 일치하는 모든 사원 정보 조회
+	 */
+	public void departmentSelect() {
+		
+		System.out.print("부서 입력 : ");
+		String dept = sc.next();
+
+		for(Employee e : service.departmentSelect(dept)) {
+			
+		
+			System.out.println(e);
+		
+		
+	
+		
+		}
+		}
+		
+	
+	
+	
+
 	
 	
 	
 	
 	
 }
-	
-	
-	
-	
-	
-
